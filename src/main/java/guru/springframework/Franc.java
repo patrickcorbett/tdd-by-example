@@ -3,9 +3,7 @@ package guru.springframework;
 /**
  * @author Patrick Corbett
  */
-public class Franc {
-
-    private int amount;
+public class Franc extends Money {
 
     public Franc(int pAmount) {
         amount = pAmount;
@@ -13,12 +11,6 @@ public class Franc {
 
     Franc times(int pMultiplier) {
         return new Franc(amount * pMultiplier);
-    }
-
-    public boolean equals(Object object) {
-        // Manual equals, left like this as equals with null or other class will be done later
-        Franc dollar = (Franc) object;
-        return amount == dollar.amount;
     }
 
 }
