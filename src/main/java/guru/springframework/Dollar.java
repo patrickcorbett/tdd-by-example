@@ -5,7 +5,7 @@ package guru.springframework;
  */
 public class Dollar {
 
-    int amount;
+    private int amount;
 
     public Dollar(int pAmount) {
         amount = pAmount;
