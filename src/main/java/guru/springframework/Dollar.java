@@ -11,7 +11,7 @@ public class Dollar {
         amount = pAmount;
     }
 
-    void times(int pMultiplier) {
-        amount *= pMultiplier;
+    Dollar times(int pMultiplier) {
+        return new Dollar(amount * pMultiplier);
     }
 }
