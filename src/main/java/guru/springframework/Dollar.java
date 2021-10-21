@@ -9,7 +9,8 @@ public class Dollar extends Money {
         amount = pAmount;
     }
 
-    Dollar times(int pMultiplier) {
+    @Override
+    public Money times(int pMultiplier) {
         return new Dollar(amount * pMultiplier);
     }
 
