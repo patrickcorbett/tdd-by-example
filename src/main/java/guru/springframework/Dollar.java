@@ -14,4 +14,11 @@ public class Dollar {
     Dollar times(int pMultiplier) {
         return new Dollar(amount * pMultiplier);
     }
+
+    public boolean equals(Object object) {
+        // Manual equals, left like this as equals with null or other class will be done later
+        Dollar dollar = (Dollar) object;
+        return amount == dollar.amount;
+    }
+
 }
