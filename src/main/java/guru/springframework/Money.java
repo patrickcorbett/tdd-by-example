@@ -6,9 +6,24 @@ package guru.springframework;
 public abstract class Money {
 
     protected int amount;
+    protected String currency;
+
+    public Money(int pAmount, String pCurrency) {
+        amount = pAmount;
+        currency = pCurrency;
+    }
 
     /**
-     * Abstract Times for money by a multiplier.
+     * Currency of the money.
+     *
+     * @return the string
+     */
+    protected String currency() {
+        return currency;
+    }
+
+    /**
+     * Multiply the current amount by a multiplier.
      *
      * @param pMultiplier
      *            the multiplier
@@ -16,12 +31,12 @@ public abstract class Money {
      */
     public abstract Money times(int pMultiplier);
 
-    public static Money dollar(int amount) {
-        return new Dollar(amount);
+    public static Money dollar(int pAmount) {
+        return new Dollar(pAmount, "USD");
     }
 
-    public static Money franc(int amount) {
-        return new Franc(amount);
+    public static Money franc(int pAmount) {
+        return new Franc(pAmount, "CHF");
     }
 
     public boolean equals(Object object) {

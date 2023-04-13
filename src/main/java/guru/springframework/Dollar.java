@@ -5,13 +5,12 @@ package guru.springframework;
  */
 public class Dollar extends Money {
 
-    public Dollar(int pAmount) {
-        amount = pAmount;
+    public Dollar(int pAmount, String pCurrency) {
+        super(pAmount, pCurrency);
     }
 
     @Override
     public Money times(int pMultiplier) {
-        return new Dollar(amount * pMultiplier);
+        return Money.dollar(amount * pMultiplier);
     }
-
 }
