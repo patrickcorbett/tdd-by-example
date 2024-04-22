@@ -9,7 +9,8 @@ public class Franc extends Money {
         amount = pAmount;
     }
 
-    Franc times(int pMultiplier) {
-        return new Franc(amount * pMultiplier);
+    @Override
+    public Money times(int multiplier) {
+        return new Franc(amount * multiplier);
     }
 }
