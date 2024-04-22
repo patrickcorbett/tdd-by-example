@@ -5,12 +5,12 @@ package guru.springframework;
  */
 public class Franc extends Money {
 
-    public Franc(int pAmount) {
-        amount = pAmount;
+    public Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
     @Override
     public Money times(int multiplier) {
-        return new Franc(amount * multiplier);
+        return Money.franc(amount * multiplier);
     }
 }
