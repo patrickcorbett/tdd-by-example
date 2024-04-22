@@ -18,6 +18,8 @@ class MoneyTest {
         assertEquals(new Dollar(10), product);
         product = five.times(3);
         assertEquals(new Dollar(15), product);
+        // Dollars dont equal francs!
+        assertNotEquals(new Dollar(5), new Franc(5));
     }
 
     @Test
